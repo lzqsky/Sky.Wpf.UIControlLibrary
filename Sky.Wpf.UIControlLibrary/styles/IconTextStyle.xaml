@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <!-- 窗体 -->
+    <System:String x:Key="str.close">&#xe900;</System:String>
+    <System:String x:Key="str.min">&#xe903;</System:String>
+    <System:String x:Key="str.max">&#xe902;</System:String>
+
+    <!-- radiobutton -->
+    <System:String x:Key="str.radio.check">&#xe904;</System:String>
+    
+    <!-- combox -->
+    <System:String x:Key="str.combox.toggle">&#xe901;</System:String>
+</ResourceDictionary>

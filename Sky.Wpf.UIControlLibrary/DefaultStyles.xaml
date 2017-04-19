@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrl="clr-namespace:Sky.Wpf.UIControlLibrary.control">
+    <ResourceDictionary.MergedDictionaries>
+        <!-- styles -->
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/ControlStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/IconTextStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/FontStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/ColorStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/SizeStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/TextBlockStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/ButtonStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/ScrollViewerStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/RadioButtonStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/TextBoxStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/ComboxItemStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/TreeViewStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/CheckBoxStyle.xaml" />
+        
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- 默认样式-->
+    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource btn.defualt}"></Style>
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource tb.default}"></Style>
+    <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource combo.default}"></Style>
+    <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource sb.default}"></Style>
+    <Style TargetType="{x:Type ScrollViewer}" BasedOn="{StaticResource sv.default}"></Style>
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource text.default}"></Style>
+    <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource text.password}"></Style>
+    <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource cb.default}"></Style>
+</ResourceDictionary>

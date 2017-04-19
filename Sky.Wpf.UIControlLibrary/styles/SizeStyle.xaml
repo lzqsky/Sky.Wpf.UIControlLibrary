@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    
+    <!-- 默认字体大小-->
+    <System:Double x:Key="size.font.default">14</System:Double>
+    <!-- 默认控件大小-->
+    <System:Double x:Key="size.height.default">34</System:Double>
+    <!-- 默认圆角大小-->
+    <CornerRadius x:Key="size.corner.default">4</CornerRadius>
+    
+    <!-- 标题高度 -->
+    <System:Int32 x:Key="size.title.height">50</System:Int32>    
+    <!-- iconButton 最小化，最大化，关闭 的宽度 --> 
+    <System:Double x:Key="size.minorclose.font">24</System:Double>
+    <!-- 滚动条 -->
+    <System:Double x:Key="size.scrollbar.width">10</System:Double>
+    <!-- 图标按钮大小 --> 
+    <System:Double x:Key="size.icon.font">18</System:Double>
+    
+    <!-- H1 - H6 -->
+    <System:Double x:Key="size.h1">36</System:Double>
+    <System:Double x:Key="size.h2">30</System:Double>
+    <System:Double x:Key="size.h3">24</System:Double>
+    <System:Double x:Key="size.h4">18</System:Double>
+    <System:Double x:Key="size.h5">14</System:Double> 
+    <System:Double x:Key="size.h6">12</System:Double>
+
+    <System:Double x:Key="size.h1.small">24</System:Double>
+    <System:Double x:Key="size.h2.small">20</System:Double>
+    <System:Double x:Key="size.h3.small">16</System:Double>
+    <System:Double x:Key="size.h4.small">13</System:Double>
+    <System:Double x:Key="size.h5.small">11</System:Double>
+    <System:Double x:Key="size.h6.small">9</System:Double>
+
+
+    <Thickness x:Key="size.padding.default">12,6</Thickness>
+    <Thickness x:Key="size.padding.icon">5,2,5,2</Thickness> 
+</ResourceDictionary>

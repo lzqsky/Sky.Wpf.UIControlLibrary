@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" >
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/control/SkyWindow.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/control/ProgressRing.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/control/dialogs/MessageDialog.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/control/tip/TipWindow.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/control/SwitchCheckBox.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+     
+</ResourceDictionary>

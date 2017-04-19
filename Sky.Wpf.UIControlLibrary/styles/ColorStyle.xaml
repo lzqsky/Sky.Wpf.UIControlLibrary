@@ -1,0 +1,93 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options">
+
+    <!--通常用于按钮、及任何修饰元素-->
+    <Color x:Key="master.color">#FF009688</Color>
+    <!-- 一般用于选中状态 -->
+    <Color x:Key="master.select">#5FB878</Color>
+    <!--  通常用于导航 -->
+    <Color x:Key="master.navigation">#393D49</Color>
+    
+    <!-- Freeze 冻结 节省资源-->
+    <!-- 主色 -->
+    <SolidColorBrush x:Key="brush.master" Color="{StaticResource master.color}" options:Freeze="true"/>
+    <!-- 标题字体 -->
+    <SolidColorBrush x:Key="brush.title.font" Color="White" options:Freeze="true"/>
+
+    <!-- 文本字体颜色 -->
+    <SolidColorBrush x:Key="brush.text.foreground" Color="#555" options:Freeze="true"/>
+    <!-- 光标颜色-->
+    <SolidColorBrush x:Key="brush.text.caret" Color="Black" options:Freeze="true"/>
+    <!-- 选中的颜色 -->
+    <SolidColorBrush x:Key="brush.text.selection" Color="{StaticResource master.select}" options:Freeze="true"/>
+    <SolidColorBrush x:Key="brush.text.background" Color="White" options:Freeze="true"/>
+    <SolidColorBrush x:Key="brush.text.borderbrush" Color="#ccc" options:Freeze="true"/>
+    <!-- 焦点时边框的颜色 -->
+    <SolidColorBrush x:Key="brush.text.focus.borderbrush" Color="{StaticResource master.color}" options:Freeze="true"/>  <!--  主打色 -->
+    <SolidColorBrush x:Key="brush.text.mouseover.borderbrush" Color="{StaticResource master.select}" options:Freeze="true"/>
+
+
+    <!--原始-->
+    <SolidColorBrush x:Key="brush.default" Color="#fff" options:Freeze="true"/>
+    <SolidColorBrush x:Key="brush.default.after" Color="#ccc" options:Freeze="true"/>
+    <!--默认-->
+    <SolidColorBrush x:Key="brush.primary" Color="{StaticResource master.color}" options:Freeze="true"/> 
+    <!--百搭-->
+    <SolidColorBrush x:Key="brush.match" Color="#FF1E9FFF" options:Freeze="true"/> 
+    <!--暖色-->
+    <SolidColorBrush x:Key="brush.warm" Color="#FFF7B824" options:Freeze="true"/> 
+    <!--警告-->
+    <SolidColorBrush x:Key="brush.warning" Color="#FFFF5722" options:Freeze="true"/>  
+
+    <!-- 滚动条 -->
+    <SolidColorBrush x:Key="brush.scrollbar.thumb.background" Color="#FF686868" options:Freeze="true"/>
+    <!--正常状态箭头颜色值-->
+    <SolidColorBrush x:Key="brush.scrollbar.repeat.background" Color="#737373" options:Freeze="true"/>
+    <!--鼠标移上时箭头颜色-->
+    <SolidColorBrush x:Key="brush.scrollbar.repeat.mouseover.background" Color="#FF7AC1FF" options:Freeze="true"/>
+    <!--滚动条移上时滚动条和箭头的背景色-->
+    <SolidColorBrush x:Key="brush.scrollbar.background" Color="#FFE8E8EC" options:Freeze="true"/>
+
+    <!-- button -->
+    <LinearGradientBrush x:Key="brush.button.default.background" StartPoint="0, 0" EndPoint="0, 1" options:Freeze="true">
+        <GradientStop Color="#ffffff" Offset="0" />
+        <GradientStop Color="#e0e0e0" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="brush.button.default.foreground" Color="Black" options:Freeze="true"/>
+    <SolidColorBrush x:Key="brush.button.default.borderbrush" Color="#ccc" options:Freeze="true"/>
+    <!-- button 中图标的颜色 -->
+    <SolidColorBrush x:Key="brush.button.default.mouseover.foreground" Color="{StaticResource master.select}" options:Freeze="true"/>
+    <!-- button 中图标的颜色 -->
+    <SolidColorBrush x:Key="brush.button.default.pressed.foreground" Color="{StaticResource master.color}" options:Freeze="true"/>
+    <!--  主打色 -->
+
+    <SolidColorBrush x:Key="brush.button.default.mouseover.background" Color="#e0e0e0" options:Freeze="true"/>
+
+    <LinearGradientBrush x:Key="brush.button.default.pressed.background" StartPoint="0, 0" EndPoint="0, 0.3" options:Freeze="true">
+        <GradientStop Color="#c6c6c6" Offset="0" />
+        <GradientStop Color="#e0e0e0" Offset="1" />
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="brush.button.default.mouseover.borderbrush" Color="{StaticResource master.select}" options:Freeze="true"/>         <!--  主打色 -->
+    <SolidColorBrush x:Key="brush.button.default.pressed.borderbrush" Color="#adadad" options:Freeze="true"/>
+    <!-- 最大最小关闭按钮 移动前和移动后的颜色 -->
+    <SolidColorBrush x:Key="brush.icon.foreground" Color="#FF787878" options:Freeze="true"/>
+    <!--<SolidColorBrush x:Key="brush.icon.moveover.foreground" Color="#fffefcfc" options:Freeze="true"/>
+    <SolidColorBrush x:Key="brush.icon.pressed.foreground" Color="#fffefcfc" options:Freeze="true"/>-->
+
+    <!-- radiobutton -->
+    <SolidColorBrush x:Key="brush.radio.check.foreground" Color="{StaticResource master.select}" options:Freeze="true"/>           <!--  主打色 -->
+
+    <!--Popup,ComboBox-->
+    <SolidColorBrush x:Key="brush.combox.popup.background" Color="White" options:Freeze="true"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="brush.item.select.background" Color="{StaticResource master.select}" options:Freeze="true"></SolidColorBrush>
+    <SolidColorBrush x:Key="brush.item.mouseover.background" Color="#fff2f2f2" options:Freeze="true"></SolidColorBrush>
+    <SolidColorBrush x:Key="brush.item.mouseover.foreground" Color="White" options:Freeze="true"></SolidColorBrush>
+
+    <!-- treeview  -->
+    <SolidColorBrush x:Key="brush.treeview.background" Color="#393D49" options:Freeze="true"/>
+    <SolidColorBrush x:Key="brush.treeview.foreground" Color="White" options:Freeze="true"/>
+    <SolidColorBrush x:Key="brush.treeview.select.background" Color="{StaticResource master.color}" options:Freeze="true"/>     <!-- 主打色 -->
+    <SolidColorBrush x:Key="brush.treeview.select.foreground" Color="White" options:Freeze="true"/>
+</ResourceDictionary>

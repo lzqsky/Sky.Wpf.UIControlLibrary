@@ -1,0 +1,138 @@
+﻿<skyui:SkyWindow x:Class="Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test"
+        xmlns:skyui="clr-namespace:Sky.Wpf.UIControlLibrary.control;assembly=Sky.Wpf.UIControlLibrary"
+                 xmlns:com="clr-namespace:Sky.Wpf.UIControlLibrary.common;assembly=Sky.Wpf.UIControlLibrary"
+               IsShowMaxButton="True"
+        mc:Ignorable="d"         Title="Sky UI" Height="600" Width="1024"  >
+    <Grid >
+        <!--<TabControl>
+            <TabItem Header="颜色">
+                <StackPanel>
+                    <TextBlock Text="1" Background="#428bca"/>
+                    <TextBlock Text="2" Background="#357ebd"/>
+                    <TextBlock Text="2" Background="#f5f5f5"/>
+                    <TextBlock Text="2" Background="#faebcc"/>
+                    <TextBlock Text="2" Background="#8a6d3b"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="按钮">
+                <ScrollViewer>
+                    <WrapPanel VerticalAlignment="Top" >
+
+
+                        <skyui:IconButton Style="{DynamicResource iconbtn.icondefault}" 
+                                          com:AttachProperty.IconString="&#xe900;"  Padding="8,2"
+                                          Background="Gold" /> 
+                    
+                    <skyui:IconButton com:AttachProperty.IconString="&#xe900;" Style="{DynamicResource iconbtn.icondefault}" com:AttachProperty.IconSize="20" Background="Gold" />
+                        <skyui:IconButton com:AttachProperty.IconString="&#xe900;" Padding="12,2" Content="关闭"/>
+                        <skyui:IconButton Content="关闭"  />
+                        <skyui:IconButton Content="IsEnabled=false" IsEnabled="False"/>
+                    <skyui:IconButton HorizontalContentAlignment="Left" Content="关闭"/>
+                    <skyui:IconButton Content="关闭" com:AttachProperty.CornerRadius="30,0,30,0"/>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <RadioButton  IsChecked="True" Style="{StaticResource rbtn.win10}" Margin="1">是</RadioButton>
+                        <RadioButton Content="否则交换空间和" IsChecked="True" Style="{DynamicResource rbtn.win10}"  />
+                    </StackPanel>
+
+                </WrapPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="进度动画">
+                <skyui:ProgressRing  Width="100"/>
+            </TabItem>
+
+            <TabItem Header="弹出框">
+                <StackPanel>
+                    <Button Content="提示" Width="80"   Click="Button_Click"></Button>
+                    <Button Content="疑问" Width="80"   Click="Button_Click1"></Button>
+                    <Button Content="气泡" Width="80"   Click="Button_Click2"></Button>
+                    <skyui:IconButton Content="&#xe900;" Width="60"></skyui:IconButton>
+                    <TextBlock x:Name="tb_result" Text="结果:" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+            </TabItem>
+            <TabItem Header="滚动条">
+                <StackPanel>
+                    <ScrollViewer Width="100" Height="100" >
+                        <TextBox TextWrapping="Wrap" Text="jahsdkjhaskdjhkjahsd甲磺酸看得见收快递费健康了坚实的分开了开始的减肥了空间哈空间圣诞节水电费会计核算电费按时接电话kj"/>
+                    </ScrollViewer>
+
+                    <ScrollViewer Background="Red" Width="100" Height="50" Margin="0,15,0,0" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <Button Width="150"/>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <ScrollViewer Background="Red" Width="100" Height="50" Margin="0,15,0,0" ScrollViewer.HorizontalScrollBarVisibility="Visible" >
+                        <StackPanel>
+                            <Button Width="500" Height="200"/>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <ScrollBar Width="80" Height="80" >
+                    </ScrollBar>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="文本框">
+                <StackPanel>
+                    <TextBox />
+                    <TextBox com:AttachProperty.CornerRadius="10" Margin="0,15,0,0"/>
+                    <TextBox com:AttachProperty.Placeholder="水印文字" Margin="0,15,0,0"/>
+                    <TextBox com:AttachProperty.Placeholder="水印文字" Style="{DynamicResource text.clear}" Margin="0,15,0,0"/>
+                    <TextBox com:AttachProperty.Placeholder="INT数字" com:AttachProperty.NumText="Int" Style="{DynamicResource text.clear}" Margin="0,15,0,0"/>
+                    <TextBox com:AttachProperty.Placeholder="FLOAT数字" com:AttachProperty.NumText="Float" Style="{DynamicResource text.clear}" Margin="0,15,0,0"/>
+                    <TextBox com:AttachProperty.Placeholder="Negative数字" com:AttachProperty.NumText="Negative" Style="{DynamicResource text.clear}" Margin="0,15,0,0"/>
+
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="下拉框">
+                <StackPanel Background="#FFE8DDDD">
+                    <ComboBox Style="{DynamicResource combo.default}" >
+                        <ComboBoxItem>asd</ComboBoxItem>
+                        <ComboBoxItem>dasd</ComboBoxItem>
+                        <ComboBoxItem>afdsfsd</ComboBoxItem>
+                    </ComboBox>
+
+                    <ComboBox Style="{DynamicResource combo.default}" com:AttachProperty.CornerRadius="10" IsEditable="True">
+                        <ComboBoxItem>asd</ComboBoxItem>
+                        <ComboBoxItem>dasd</ComboBoxItem>
+                        <ComboBoxItem>afdsfsd</ComboBoxItem>
+                    </ComboBox>
+
+                    <ComboBox Style="{DynamicResource combo.clear}"  IsEditable="True">
+                        <ComboBoxItem>asd</ComboBoxItem>
+                        <ComboBoxItem>dasd</ComboBoxItem>
+                        <ComboBoxItem>afdsfsd</ComboBoxItem>
+                    </ComboBox>
+                    
+                </StackPanel>
+            </TabItem>
+        </TabControl>-->
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <!--  -->
+        <TreeView SelectedItemChanged="TreeView_SelectedItemChanged" Style="{DynamicResource treeview.default}">
+            <TreeViewItem Header="基础元素" x:Name="item1" IsExpanded="True">
+                <TreeViewItem Header="按钮"></TreeViewItem>
+                <TreeViewItem Header="文本框"></TreeViewItem>
+                <TreeViewItem Header="下拉框"></TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+
+
+
+        <Grid Grid.Column="1" x:Name="grid_content"> 
+        </Grid>
+    </Grid>
+</skyui:SkyWindow>

@@ -1,0 +1,136 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrl="clr-namespace:Sky.Wpf.UIControlLibrary.control"
+                    xmlns:com="clr-namespace:Sky.Wpf.UIControlLibrary.common">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/ControlStyle.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+    <ControlTemplate x:Key="iconButtonTemplate" TargetType="{x:Type ctrl:IconButton}">
+        <Border x:Name="PART_border"
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"
+                            Height="{TemplateBinding Height}"
+                            Width="{TemplateBinding Width}"
+                            Margin="{TemplateBinding Margin}"
+                            CornerRadius="{TemplateBinding com:AttachProperty.CornerRadius}"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                            SnapsToDevicePixels="True">
+
+            <!-- icon text -->
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
+                <TextBlock x:Name="PART_icon"  RenderTransformOrigin="0.5,0.5"
+                           Style="{DynamicResource tb.icon}" 
+                           Text="{TemplateBinding com:AttachProperty.IconString}"
+                           Margin="{TemplateBinding com:AttachProperty.IconMargin}"
+                           FontSize="{TemplateBinding com:AttachProperty.IconSize}"
+                           Foreground="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Foreground}">
+                    <TextBlock.RenderTransform>
+                        <RotateTransform x:Name="PART_transIcon" Angle="0"/>
+                    </TextBlock.RenderTransform> 
+                </TextBlock>
+
+                <!-- text -->
+                <TextBlock VerticalAlignment="Center" x:Name="PART_txt" 
+                           FontFamily="{DynamicResource font.default}"
+                           Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Content}"
+                           FontSize="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=FontSize}"
+                           Foreground="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Foreground}">
+                    
+                </TextBlock>
+            </StackPanel>
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <!--设置鼠标进入时的背景、前景样式-->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.MouseOverBackground)}" TargetName="PART_border"/>
+                <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.MouseOverBorderBrush)}" TargetName="PART_border"/>
+                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.MouseOverForeground)}" TargetName="PART_icon"/>
+                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.MouseOverForeground)}" TargetName="PART_txt"/>
+            </Trigger>
+            <Trigger  Property="com:AttachProperty.IconString" Value="">
+                <Setter  TargetName="PART_icon" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+            <Trigger Property="Content" Value="{x:Null}">
+                <Setter TargetName="PART_icon" Property="Margin" Value="0"/>
+            </Trigger>
+            <!--Ficon的动画触发器-->
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="true"></Condition>
+                    <Condition Property="com:AttachProperty.IsIconAnimation" Value="true"></Condition>
+                </MultiTrigger.Conditions>
+                <MultiTrigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="PART_transIcon" Storyboard.TargetProperty="Angle" To="180" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.EnterActions>
+                <MultiTrigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="PART_transIcon" Storyboard.TargetProperty="Angle" To="0" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiTrigger.ExitActions>
+            </MultiTrigger>
+            <!--鼠标按下时的前景、背景样式-->
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.PressedBackground)}" TargetName="PART_border" />
+                <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.PressedBorderBrush)}" TargetName="PART_border"/>
+                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.PressedForeground)}" TargetName="PART_icon"/>
+                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=(com:AttachProperty.PressedForeground)}" TargetName="PART_txt"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Opacity" Value="0.5" TargetName="PART_border"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+  
+    <!-- 纯图标 带旋转 最小化 最大化 关闭 -->
+    <Style  x:Key="iconbtn.icondefault" TargetType="{x:Type ctrl:IconButton}" BasedOn="{StaticResource base.style}">       
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource brush.icon.foreground}" /> 
+        <Setter Property="BorderBrush" Value="Transparent" />        
+        <Setter Property="BorderThickness" Value="0" />    
+        <Setter Property="FontSize" Value="1" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="{DynamicResource size.padding.icon}" />
+        <Setter Property="com:AttachProperty.MouseOverBackground" Value="Transparent" /> 
+        <Setter Property="com:AttachProperty.PressedBackground" Value="Transparent" />  
+        <Setter Property="com:AttachProperty.IconMargin" Value="0" />
+        <Setter Property="com:AttachProperty.IsIconAnimation" Value="True" />
+
+        <Setter Property="Template" Value="{StaticResource iconButtonTemplate}"/>
+    </Style>
+    
+    <!-- 图标 加文字 -->
+    <Style TargetType="{x:Type ctrl:IconButton}" BasedOn="{StaticResource base.style}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="{DynamicResource brush.button.default.background}" />
+        <Setter Property="Foreground" Value="{DynamicResource brush.button.default.foreground}" />        
+        <Setter Property="BorderBrush" Value="{DynamicResource brush.button.default.borderbrush}" />
+        <Setter Property="BorderThickness" Value="1" />        
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="{DynamicResource size.padding.default}" />
+        <Setter Property="FontSize" Value="{DynamicResource size.font.default}" />
+        <Setter Property="Margin" Value="0" />
+        
+        <Setter Property="com:AttachProperty.MouseOverBackground" Value="{DynamicResource brush.button.default.mouseover.background}" />
+        <Setter Property="com:AttachProperty.MouseOverForeground" Value="{DynamicResource brush.button.default.mouseover.foreground}" />
+        <Setter Property="com:AttachProperty.PressedBackground" Value="{DynamicResource brush.button.default.pressed.background}" />
+        <Setter Property="com:AttachProperty.PressedForeground" Value="{DynamicResource brush.button.default.pressed.foreground}" />
+        <Setter Property="com:AttachProperty.PressedBorderBrush" Value="{DynamicResource brush.button.default.pressed.borderbrush}" />
+        <Setter Property="com:AttachProperty.MouseOverBorderBrush" Value="{DynamicResource brush.button.default.mouseover.borderbrush}" />
+        
+        <Setter Property="com:AttachProperty.CornerRadius" Value="{DynamicResource size.corner.default}" />
+        <Setter Property="com:AttachProperty.IconSize" Value="{DynamicResource size.icon.font}" />
+        <Setter Property="com:AttachProperty.IconMargin" Value="0,0,5,0" />
+        <Setter Property="com:AttachProperty.IsIconAnimation" Value="False" />
+        <Setter Property="Template" Value="{StaticResource iconButtonTemplate}"/> 
+    </Style>
+</ResourceDictionary>

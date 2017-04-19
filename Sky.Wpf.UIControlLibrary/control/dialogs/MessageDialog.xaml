@@ -1,0 +1,51 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrl="clr-namespace:Sky.Wpf.UIControlLibrary.control.dialogs">
+    <ControlTemplate x:Key="diagleTemplate">
+        <AdornerDecorator>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.RowSpan="2" BorderBrush="#c9c9c9" BorderThickness="1" CornerRadius="5" Background="White">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="0" Opacity="0.3" BlurRadius="16"/>
+                    </Border.Effect>
+                </Border>
+                <Grid>
+                    <Border  BorderBrush="#292f46" BorderThickness="1" >
+
+                    </Border>
+                    <Border Background="#FF8F8F8F" Margin="1"></Border>
+                    <Grid VerticalAlignment="Center" HorizontalAlignment="Left" FocusVisualStyle="{x:Null}" Margin="30">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <!-- 图标 -->
+                        <Grid>
+                            <Ellipse Fill="#fd7871"/>
+                        </Grid>
+                        <!-- 提醒内容 -->
+                        <TextBlock Grid.Column="1" Text="{Binding MsgContent,RelativeSource={RelativeSource TemplatedParent}}" 
+                                       TextWrapping="Wrap"  FontSize="14" 
+                                       Foreground="#ffffff" 
+                                       VerticalAlignment="Center" Margin="10,0,0,0"/>
+                    </Grid>
+
+                </Grid>
+
+                <Grid Grid.Row="2">
+                    <StackPanel x:Name="PART_TOOL" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+
+                    </StackPanel>
+                </Grid>
+            </Grid>
+        </AdornerDecorator>
+    </ControlTemplate>
+    <Style TargetType="{x:Type ctrl:MessageDialog}">
+        <Setter Property="Template" Value="{StaticResource diagleTemplate}"/>
+    </Style>
+</ResourceDictionary>

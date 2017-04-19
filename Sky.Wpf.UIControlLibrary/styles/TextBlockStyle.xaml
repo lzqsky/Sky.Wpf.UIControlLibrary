@@ -1,0 +1,69 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    >
+    <Style x:Key="tb" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>  
+        <Setter Property="TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style x:Key="tb.title" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource tb}">
+        <Setter Property="Foreground" Value="{DynamicResource brush.title.font}"/>
+    </Style>
+    
+    <Style x:Key="tb.default" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource tb}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontFamily" Value="{DynamicResource font.default}"/>
+        <Setter Property="FontSize" Value="{DynamicResource size.font.default}"/>        
+    </Style>
+
+    <Style x:Key="tb.icon" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource tb}">
+        <Setter Property="FontFamily" Value="{DynamicResource font.icon}"></Setter>
+        <Setter Property="Foreground" Value="{DynamicResource brush.icon.foreground}"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    
+    <Style x:Key="tb.h1" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h1}"/>
+    </Style>
+    <Style x:Key="tb.h2" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h2}"/>
+    </Style>
+    <Style x:Key="tb.h3" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h3}"/>
+    </Style>
+    <Style x:Key="tb.h4" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h4}"/>
+    </Style>
+    <Style x:Key="tb.h5" TargetType="{x:Type TextBlock}"> 
+        <Setter Property="FontSize" Value="{DynamicResource size.h5}"/>
+    </Style>
+    <Style x:Key="tb.h6" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h6}"/>
+    </Style>
+
+    <Style x:Key="tb.h1.small" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h1.small}"/>
+    </Style>
+    <Style x:Key="tb.h2.small" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h2.small}"/>
+    </Style>
+    <Style x:Key="tb.h3.small" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h3.small}"/>
+    </Style>
+    <Style x:Key="tb.h4.small" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h4.small}"/>
+    </Style>
+    <Style x:Key="tb.h5.small" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h5.small}"/>
+    </Style>
+    <Style x:Key="tb.h6.small"  TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="{DynamicResource size.h6.small}"/>
+    </Style>
+    
+    
+</ResourceDictionary>

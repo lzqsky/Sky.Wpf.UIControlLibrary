@@ -1,0 +1,21 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test1"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="test1.MainWindow"
+        mc:Ignorable="d"  
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <local:MyPanelParent>
+            <Grid Background="Red" Width="50" Height="15">
+                <Thumb  HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="10" Width="10" DragDelta="Thumb_DragDelta" />
+            </Grid> 
+        </local:MyPanelParent>
+
+        <!--<Grid Background="DarkCyan">
+            <Thumb  HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="10" Width="10" DragDelta="Thumb_DragDelta" />
+        </Grid>-->
+    </Grid>
+</Window>
