@@ -203,24 +203,32 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Grid x:Name="Grid">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Border Background="{TemplateBinding Background}" 
+                    
+                        <Grid x:Name="Grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Background="{TemplateBinding Background}" 
                                 x:Name="Bg" Grid.ColumnSpan="2" 
                                 Margin="0,1,2,1"
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                        <TextBlock Grid.Column="1"  
+                            <TextBlock Grid.Column="1"  
                                    FontSize="{Binding Path=(com:AttachProperty.IconSize),RelativeSource={RelativeSource TemplatedParent}}"
                                    Text="{TemplateBinding com:AttachProperty.IconString}" 
                                    com:AttachProperty.IsIconAnimation="{TemplateBinding IsChecked}"
                                    Foreground="{TemplateBinding Foreground}" 
                                    Style="{DynamicResource tb.icon}"
-                                   Margin="{TemplateBinding com:AttachProperty.IconMargin}">                           
-                        </TextBlock>
-                    </Grid>
+                                   Margin="{TemplateBinding com:AttachProperty.IconMargin}">
+                            </TextBlock>
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                          Margin="0,4,0,0" 
+                                          Grid.Row="0" 
+                                          RecognizesAccessKey="True" 
+                                          SnapsToDevicePixels="True" 
+                                          VerticalAlignment="Top"/>
+                        </Grid>
+                  
                     <!--z触发器-->
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">

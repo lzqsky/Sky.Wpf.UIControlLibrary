@@ -1,7 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:ctrl="clr-namespace:Sky.Wpf.UIControlLibrary.control"
-                    xmlns:local="clr-namespace:Sky.Wpf.UIControlLibrary.styles">
+                    xmlns:ctrl="clr-namespace:Sky.Wpf.UIControlLibrary.control">
     <ctrl:TreeViewItemStyleSelector x:Key="treeviewStyleSelector"/>
 
     <Style x:Key="TreeViewItemFocusVisual">
