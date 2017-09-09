@@ -404,6 +404,44 @@ namespace Sky.Wpf.UIControlLibrary.common
                 e.Handled = true;
         }
         #endregion
+
+        #region 合并style
+        public static string GetMultiStyle(DependencyObject obj)
+        {
+            return (string)obj.GetValue(MultiStyleProperty);
+        }
+
+        public static void SetMultiStyle(DependencyObject obj, string value)
+        {
+            obj.SetValue(MultiStyleProperty, value);
+        }
+
+        public static readonly DependencyProperty MultiStyleProperty = DependencyProperty.RegisterAttached("MultiStyle", typeof(string), typeof(AttachProperty), new PropertyMetadata(null, new PropertyChangedCallback(OnMultiStyleChanged)));
+
+        public static void OnMultiStyleChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var newValue = (string)e.NewValue;
+            var fe = d as FrameworkElement;
+            Style result = new Style();
+
+            if (newValue.HasValue())
+            {
+                var styleKeys = newValue.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (var key in styleKeys)
+                {
+                    var style = fe.TryFindResource(key) as Style;
+
+                    if (style != null)
+                    {
+                        result.Merge(style);
+                    }
+                }
+
+                fe.Style = result;
+            }
+        }
+        #endregion
     } 
 
     public enum NumTextType

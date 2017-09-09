@@ -10,16 +10,19 @@
     <Style x:Key="btn.lg" TargetType="{x:Type Button}">
         <Setter Property="Padding" Value="16 10" />
         <Setter Property="FontSize" Value="18" />
+        <Setter Property="Height" Value="Auto"/>
     </Style>
 
     <Style x:Key="btn.sm" TargetType="{x:Type Button}">
         <Setter Property="Padding" Value="10 5" />
         <Setter Property="FontSize" Value="12" />
+        <Setter Property="Height" Value="Auto"/>
     </Style>
 
     <Style x:Key="btn.xs" TargetType="{x:Type Button}">
         <Setter Property="Padding" Value="5 1" />
         <Setter Property="FontSize" Value="12" />
+        <Setter Property="Height" Value="Auto"/>
     </Style>
 
 
@@ -68,13 +71,9 @@
         <ControlTemplate.Triggers>
             <!--设置鼠标进入时的背景、前景样式-->
             <Trigger Property="IsMouseOver" Value="True">
-                <!--<Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.MouseOverBackground)}" TargetName="PART_border"/>
-                
-                
-                <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.MouseOverForeground)}" TargetName="PART_txt"/>-->
                 <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.MouseOverForeground)}" TargetName="PART_icon"/>
                 <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=(com:AttachProperty.MouseOverBorderBrush)}" TargetName="PART_border"/>
-                <Setter Property="Opacity" Value="0.7" TargetName="PART_border"/>
+                <Setter Property="Opacity" Value="1" TargetName="PART_border"/>
             </Trigger>
             <Trigger  Property="com:AttachProperty.IconString" Value="">
                 <Setter  TargetName="PART_icon" Property="Visibility" Value="Collapsed"/>

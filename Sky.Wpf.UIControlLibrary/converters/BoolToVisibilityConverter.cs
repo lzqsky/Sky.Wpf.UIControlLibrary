@@ -16,7 +16,7 @@ namespace Sky.Wpf.UIControlLibrary.converters
         {
             if (value == null)
                 return Visibility.Collapsed;
-
+            
             try
             {
                 return bool.Parse(value.ToString()) ? Visibility.Visible : Visibility.Collapsed;

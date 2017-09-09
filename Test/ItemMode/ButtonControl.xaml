@@ -5,11 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"   
              xmlns:com="clr-namespace:Sky.Wpf.UIControlLibrary.common;assembly=Sky.Wpf.UIControlLibrary"
              mc:Ignorable="d" d:DesignWidth="804.745">
-    <Grid>
+     
+    <Grid Background="White">
         <ScrollViewer ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
             <StackPanel VerticalAlignment="Top" Margin="15">
-                <GroupBox Header="按钮主题">
+                <GroupBox Header="六种按钮主题" >
                     <StackPanel Orientation="Horizontal" Height="50">
                         <Button Content="原始按钮"  />
                         <Button Content="默认按钮" Margin="10,0,0,0"   Style="{DynamicResource btn.primary}" />
@@ -20,7 +21,20 @@
                     </StackPanel>
                 </GroupBox>
 
-                <GroupBox Header="图标按钮">
+                <GroupBox Header="四种按钮尺寸"  Margin="0,10,0,0">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" >
+                            <Button Content="默认按钮" Margin="10,0,0,0" com:AttachProperty.MultiStyle="btn.primary btn.lg" />
+                            <Button Content="默认按钮" Margin="10,0,0,0"  Style="{DynamicResource btn.primary}" />
+                            <Button Content="默认按钮" Margin="10,0,0,0" com:AttachProperty.MultiStyle="btn.primary btn.sm" />
+                            <Button Content="默认按钮" Margin="10,0,0,0" com:AttachProperty.MultiStyle="btn.primary btn.xs" />
+
+                        </StackPanel>
+                    </StackPanel>
+                   
+                </GroupBox>
+                
+                <GroupBox Header="图标按钮" >
                     <StackPanel Orientation="Horizontal" Height="50">
                         <Button Style="{DynamicResource btn.icondefault}" com:AttachProperty.IconString="&#xe900;" />
                         <Button Style="{DynamicResource btn.icondefault}" com:AttachProperty.IconString="&#xe901;" Margin="10,0" />
@@ -31,7 +45,7 @@
 
                 <GroupBox Header="圆角按钮">
                     <StackPanel Orientation="Horizontal" Height="50">
-                       
+
                         <Button Content="原始按钮"  com:AttachProperty.CornerRadius="15"/>
                         <Button Content="默认按钮" Margin="10,0,0,0" Style="{DynamicResource btn.primary}" com:AttachProperty.CornerRadius="15"/>
                         <Button Content="百搭按钮" Margin="10,0,0,0" Style="{DynamicResource btn.match}" com:AttachProperty.CornerRadius="15"/>

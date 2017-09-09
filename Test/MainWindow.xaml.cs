@@ -58,10 +58,10 @@ namespace Test
                 {
                     switch (key)
                     {
-                        case "按钮":
+                        case "按钮组":
                             usctrol = new ButtonControl();
                             break;
-                        case "文本框":
+                        case "表单集合":
                             usctrol = new TextBoxControl();
                             break;
 

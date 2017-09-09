@@ -16,6 +16,7 @@
         <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/ComboxItemStyle.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/TreeViewStyle.xaml" />
         <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/CheckBoxStyle.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/GroupBoxStyle.xaml" />
         
     </ResourceDictionary.MergedDictionaries>
 
@@ -28,4 +29,5 @@
     <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource text.default}"></Style>
     <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource text.password}"></Style>
     <Style TargetType="{x:Type CheckBox}" BasedOn="{StaticResource cb.default}"></Style>
+    <Style TargetType="{x:Type GroupBox}" BasedOn="{StaticResource gb.default}"></Style>
 </ResourceDictionary>

@@ -4,8 +4,8 @@
 
     <!--通常用于按钮、及任何修饰元素-->
     <Color x:Key="master.color">#FF009688</Color>
-    <!-- 一般用于选中状态 -->
-    <Color x:Key="master.select">#5FB878</Color>
+    <!-- 一般用于选中状态 5FB878-->
+    <Color x:Key="master.select">#FF009688</Color>
     <!--  通常用于导航 -->
     <Color x:Key="master.navigation">#393D49</Color>
     
@@ -50,10 +50,11 @@
     <SolidColorBrush x:Key="brush.scrollbar.background" Color="#FFE8E8EC" options:Freeze="true"/>
 
     <!-- button -->
-    <LinearGradientBrush x:Key="brush.button.default.background" StartPoint="0, 0" EndPoint="0, 1" options:Freeze="true">
+    <!--<LinearGradientBrush x:Key="brush.button.default.background" StartPoint="0, 0" EndPoint="0, 1" options:Freeze="true">
         <GradientStop Color="#ffffff" Offset="0" />
         <GradientStop Color="#e0e0e0" Offset="1" />
-    </LinearGradientBrush>
+    </LinearGradientBrush>-->
+    <SolidColorBrush x:Key="brush.button.default.background" Color="Transparent" options:Freeze="true"/>
     <SolidColorBrush x:Key="brush.button.default.foreground" Color="Black" options:Freeze="true"/>
     <SolidColorBrush x:Key="brush.button.default.borderbrush" Color="#ccc" options:Freeze="true"/>
     <!-- button 中图标的颜色 -->

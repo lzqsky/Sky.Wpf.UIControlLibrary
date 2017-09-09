@@ -400,19 +400,19 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <!--  -->
-        <!--<TreeView SelectedItemChanged="TreeView_SelectedItemChanged" Style="{DynamicResource treeview.default}">
+        <TreeView SelectedItemChanged="TreeView_SelectedItemChanged" Style="{DynamicResource treeview.default}">
             <TreeViewItem Header="基础元素" x:Name="item1" IsExpanded="True">
-                <TreeViewItem Header="按钮"></TreeViewItem>
-                <TreeViewItem Header="文本框"></TreeViewItem>
+                <TreeViewItem Header="按钮组"></TreeViewItem>
+                <TreeViewItem Header="表单集合"></TreeViewItem>
                 <TreeViewItem Header="下拉框"></TreeViewItem>
             </TreeViewItem>
-        </TreeView>-->
-        <StackPanel>
+        </TreeView>
+        <!--<StackPanel>
             <Expander Header="基础元素" IsExpanded="False" Style="{DynamicResource ExpanderStyle1}">
                 <StackPanel>
                     <TextBlock Text="按钮" Padding="5" HorizontalAlignment="Center"/>
                     <TextBlock Text="文本框" Padding="5" HorizontalAlignment="Center"/>
-                    <TextBlock Text="下拉框" Padding="5" ="Center"/>
+                    <TextBlock Text="下拉框" Padding="5" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Expander>
             <Expander Header="asda" IsExpanded="False" Style="{DynamicResource ExpanderStyle1}">
@@ -420,10 +420,10 @@
                     <Button Content="aa"/>
                 </StackPanel>
             </Expander>
-        </StackPanel>
+        </StackPanel>-->
 
 
-        <Grid Grid.Column="1" x:Name="grid_content">
+        <Grid Grid.Column="1" x:Name="grid_content" >
             <StackPanel>
                 <Expander Header="asda" IsExpanded="False" Style="{DynamicResource ExpanderStyle1}">
                     <StackPanel>
