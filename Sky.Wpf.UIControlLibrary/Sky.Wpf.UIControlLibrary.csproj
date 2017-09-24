@@ -160,8 +160,6 @@
     <Compile Include="control\tip\TipWindow.xaml.cs">
       <DependentUpon>TipWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="converters\BoolToVisibilityConverter.cs" />
-    <Compile Include="converters\TrueToFalseConverter.cs" />
     <Compile Include="models\win32.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +191,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Sky.Wpf.Converters\Sky.Wpf.Converters.csproj">
+      <Project>{a35be7e1-cede-4a70-b557-e9e7784c9d85}</Project>
+      <Name>Sky.Wpf.Converters</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,13 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace Sky.Wpf.UIControlLibrary.converters
+namespace Sky.Wpf.Converters
 {
     /// <summary>
     /// 这是一个颠倒黑白的世界
     /// </summary>
     [ValueConversion(typeof(bool), typeof(bool))]
-    public class TrueToFalseConverter : IValueConverter
+    public class ReversedConverter:IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

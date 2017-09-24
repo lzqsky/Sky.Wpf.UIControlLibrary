@@ -107,6 +107,7 @@
     <Compile Include="MultiConverterGroup.cs" />
     <Compile Include="Modes\MultiConverterGroupStep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReversedConverter.cs" />
     <Compile Include="TypeConverter.cs" />
   </ItemGroup>
   <ItemGroup />

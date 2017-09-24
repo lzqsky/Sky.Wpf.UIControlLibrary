@@ -1,11 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
                     xmlns:ctrl="clr-namespace:Sky.Wpf.UIControlLibrary.control"
-                    xmlns:conver="clr-namespace:Sky.Wpf.UIControlLibrary.converters"
+                    xmlns:conver="clr-namespace:Sky.Wpf.Converters;assembly=Sky.Wpf.Converters"
                     xmlns:com="clr-namespace:Sky.Wpf.UIControlLibrary.common"
                     xmlns:ext="clr-namespace:Sky.Wpf.UIControlLibrary.common">
 
-    <conver:BoolToVisibilityConverter x:Key="booltovisibilityConvert"/>
+    <conver:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
 
     <ControlTemplate x:Key="SkyWindowControlTemplate" TargetType="{x:Type ctrl:SkyWindow}">
         <AdornerDecorator>
@@ -66,21 +66,21 @@
                         <!-- min,max,close -->
                         <StackPanel Grid.Row="0" Grid.Column="2" Margin="0,0,10,0" Orientation="Horizontal">
                             <Button x:Name="PART_MinimizeButton" Style="{DynamicResource btn.icondefault}" 
-                                             Visibility="{Binding IsShowMinButton,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource booltovisibilityConvert}}" 
+                                             Visibility="{Binding IsShowMinButton,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource BooleanToVisibilityConverter}}" 
                                              com:AttachProperty.IconString="{DynamicResource str.min}" 
                                              com:AttachProperty.MouseOverForeground="White"
                                              com:AttachProperty.PressedForeground="White"
                                              BorderBrush="White" Opacity="1"
                                              com:AttachProperty.IconSize="{DynamicResource size.minorclose.font}"/>
                             <Button x:Name="PART_RestoreButton" Style="{DynamicResource btn.icondefault}"  
-                                             Visibility="{Binding IsShowMaxButton,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource booltovisibilityConvert}}" 
+                                             Visibility="{Binding IsShowMaxButton,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource BooleanToVisibilityConverter}}" 
                                              com:AttachProperty.IconString="{DynamicResource str.max}" 
                                              com:AttachProperty.MouseOverForeground="White"
                                              com:AttachProperty.PressedForeground="White"
                                              BorderBrush="White" Opacity="1"
                                              com:AttachProperty.IconSize="{DynamicResource size.minorclose.font}"/>
                             <Button x:Name="PART_CloseButton" Style="{DynamicResource btn.icondefault}"  
-                                             Visibility="{Binding IsShowCloseButton,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource booltovisibilityConvert}}" 
+                                             Visibility="{Binding IsShowCloseButton,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource BooleanToVisibilityConverter}}" 
                                              com:AttachProperty.IconString="{DynamicResource str.close}" 
                                              com:AttachProperty.MouseOverForeground="White"
                                              com:AttachProperty.PressedForeground="White"

@@ -1,15 +1,12 @@
-﻿<UserControl x:Class="Test.ItemMode.TextBoxControl"
+﻿<UserControl x:Class="BaseControlModule.Views.TextBoxControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Test.ItemMode"
              xmlns:ctrl="clr-namespace:Sky.Wpf.UIControlLibrary.control;assembly=Sky.Wpf.UIControlLibrary"
              xmlns:com="clr-namespace:Sky.Wpf.UIControlLibrary.common;assembly=Sky.Wpf.UIControlLibrary"
              mc:Ignorable="d"  d:DesignWidth="600" Background="White">
-    <UserControl.Resources>
-        
-    </UserControl.Resources>
+ 
     <Grid>
         <StackPanel Margin="15">
             <GroupBox Header="表单元素">

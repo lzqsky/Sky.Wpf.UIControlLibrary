@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Test.ItemMode
+namespace BaseControlModule.Views
 {
     /// <summary>
-    /// ButtonControl.xaml 的交互逻辑
+    /// TextBoxControl.xaml 的交互逻辑
     /// </summary>
-    public partial class ButtonControl : UserControl
+    public partial class TextBoxControl : UserControl
     {
-        public ButtonControl()
+        public TextBoxControl()
         {
             InitializeComponent();
         }

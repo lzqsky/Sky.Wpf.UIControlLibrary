@@ -1,12 +1,12 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:com="clr-namespace:Sky.Wpf.UIControlLibrary.common"
-                    xmlns:conver="clr-namespace:Sky.Wpf.UIControlLibrary.converters"
+                    xmlns:conver="clr-namespace:Sky.Wpf.Converters;assembly=Sky.Wpf.Converters"
                     xmlns:ctrl="clr-namespace:Sky.Wpf.UIControlLibrary.control" >
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/Sky.Wpf.UIControlLibrary;component/Styles/ControlStyle.xaml" />
     </ResourceDictionary.MergedDictionaries>
-    <conver:TrueToFalseConverter x:Key="truetofalseConvert"></conver:TrueToFalseConverter>
+    <conver:ReversedConverter x:Key="ReversedConverter"></conver:ReversedConverter>
     
     <!--下拉条目样式-->
     <Style TargetType="{x:Type ComboBoxItem}" x:Key="ComboBoxItemStyle">
@@ -95,7 +95,7 @@
                                          IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
                                          Margin="5,2,5,2" 
                                          Grid.Column="0"  Grid.ColumnSpan="3" 
-                                         IsEnabled="{Binding Path=IsReadOnly,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource truetofalseConvert},Mode=OneWay}"
+                                         IsEnabled="{Binding Path=IsReadOnly,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource ReversedConverter},Mode=OneWay}"
                                          />
                             <!--水印   -->
                             <Border Grid.Column="0">
@@ -243,7 +243,7 @@
                                      com:AttachProperty.MouseOverForeground="{DynamicResource brush.text.focus.borderbrush}"
                                      Style="{DynamicResource btn.icondefault}"  Width="Auto"
                                      IsTabStop="False" Cursor="Arrow"  
-                                     IsEnabled="{Binding Path=IsReadOnly,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ComboBox}}, Converter={StaticResource truetofalseConvert},Mode=OneWay}"
+                                     IsEnabled="{Binding Path=IsReadOnly,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ComboBox}}, Converter={StaticResource ReversedConverter},Mode=OneWay}"
                                      CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ComboBox}}}" 
                                      com:AttachCommand.IsClearTextProperty="True"                                     
                                      />
